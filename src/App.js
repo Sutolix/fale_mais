@@ -11,7 +11,7 @@ const initialData = {
 function App() {
 
   function handleSubmit(data){
-    console.log(data.name);
+    console.log(data);
   }
 
   return (
