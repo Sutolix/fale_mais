@@ -1,29 +1,108 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import { useForm } from "react-hook-form";
+
+
+
 
 export default function App() {
 
-  const call1 = 1.9; //11 - 16
-  const call2 = 1.7; //11 - 17
-  const call3 = 0.9; //11 - 18
-  const call4 = 2.9; //16 - 11
-  const call5 = 2.7; //17 - 11
-  const call6 = 1.9; //18 - 11
 
-  const [plan, setPlan] = useState(null);
-  const [call, setCall] = useState(null);
-  const [minutes, setMinutes] = useState(null);
+  const ddds =
+  [
+    {
+      'ddd':"011",
+      '016':1.90,
+      '017':1.70,
+      '018':0.90
+    },
+    {
+      'ddd':"016",
+      '011':2.90
+    },
+    {
+      'ddd':"017",
+      '011':2.70
+    },
+    {
+      'ddd':"018",
+      '011':1.90
+    },
+  ];
+
+
+  const plans = 
+  [
+    {fm: 30},
+    {fm: 60},
+    {fm: 120}
+  ];
+
+  const [plan, setPlan] = useState(30);
+  const [call, setCall] = useState(1);
+  const [minutes, setMinutes] = useState(1);
+  const [planOn, setPlanOn] = useState('0');
+  const [planOff, setPlanOff] = useState('0');
 
   const { register, handleSubmit } = useForm();
   
   const onSubmit = data => {
-    console.log(data);
+    teste(data)
   };
 
+  const [ddd] = [ddds];
+  const [planx] = [plans];
+
+    function teste (data) {
+
+      const cust = data.call;
+      var price = 0;
+
+    switch(cust) {
+ 
+      case '1':
+        price = 1.9;
+        break;
+      
+      case '2':
+        price = 1.7;
+        break;
+ 
+      case '3':
+        price = 0.9;
+        break;
+ 
+      case '4':
+        price = 2.9;
+        break;
+
+      case '5':
+        price = 2.7;
+        break;
+
+      case '6':
+        price = 1.9;
+        break;
+ 
+      default:
+        break;
+      }
 
 
+      const surplus = (data.minutes - data.plan);
+      var vprice = price*0.1;
+      console.log(data.minutes);
+      console.log(vprice);
+      if (surplus < 0){
+        setPlanOn('0');
+        setPlanOff((data.minutes) * price);
+      }else{
+        setPlanOn(surplus * vprice)
+        setPlanOff((data.minutes) * price);
+      }
+    }
 
   return (
+    <div>
     <form onSubmit={handleSubmit(onSubmit)}>
 
       <label>Escolha um plano</label>
@@ -48,5 +127,20 @@ export default function App() {
 
       <input type="submit" />
     </form>
+
+
+
+    <div>
+
+    <p>Com plano</p>
+    <span>${planOn}</span>
+
+    <p>Sem plano</p>
+    <span>${planOff}</span>
+
+    </div>
+
+
+    </div>
   )
 }
