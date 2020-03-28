@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useAlert } from 'react-alert';
 import { useForm } from "react-hook-form";
 import './App.css';
 
@@ -7,6 +8,8 @@ export default function App() {
   const [planOff, setPlanOff] = useState('0');
 
   const { register, handleSubmit } = useForm();
+
+  const alert = useAlert();
 
   const onSubmit = data => {
     calc(data)
@@ -53,7 +56,12 @@ export default function App() {
     console.log(price);
     console.log(surplus);
 
-    if (surplus < 0) {
+    if (data.minutes <= 0){
+      alert.error('Por favor, digite um valor válido!');
+      setPlanOn('0');
+      setPlanOff('0');
+    
+    } else if ((surplus < 0) & (data.minutes >= 1)) {
       setPlanOn('0');
       setPlanOff(parseFloat(((data.minutes) * price).toFixed(2)));
     } else {
@@ -64,7 +72,7 @@ export default function App() {
 
   return (
     <div className="container d-flex justify-content-center">
-      <div className="calc row justify-content-around">
+      <div className="calc row justify-content-around align-items-center">
         
         <div className="form col-md-4">
           <form id="plansform" onSubmit={handleSubmit(onSubmit)}>
@@ -78,7 +86,7 @@ export default function App() {
             </div>
 
             <div className="form-group">
-              <label>Selecione o DDD de origem</label>
+              <label>Selecione os ddds</label>
               <select className="form-control" ref={register} name="call" required>
                 <option value="1">011 a 016</option>
                 <option value="2">011 a 017</option>
@@ -90,8 +98,8 @@ export default function App() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="minutes">Digite a duração da ligação</label>
-              <input className="form-control" ref={register} id="minutes" name="minutes" type="number" min="1" placeholder="minutos" required />
+              <label htmlFor="minutes">Duração da chamada</label>
+              <input className="form-control" ref={register} id="minutes" name="minutes" type="number" min="1" placeholder="min" required />
             </div>
 
             <button className="btn btn-success align-self-center" type="submit">Ver por quanto fica</button>
