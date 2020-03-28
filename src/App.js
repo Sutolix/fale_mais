@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAlert } from 'react-alert';
 import { useForm } from "react-hook-form";
-import './App.css';
+import './assets/style.css';
 
 export default function App() {
   const [minutes, setMinutes] = useState('');
