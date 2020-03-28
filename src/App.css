@@ -14,16 +14,39 @@ body {
 	height: 100vh;
 }
 
+.container .head span {
+	float: right;
+	margin-bottom: 5px;
+	font-size: 2em;
+	font-family: 'Pacifico', cursive;
+}
+ .container .head span:last-child{
+ 	font-size: 0.8em;
+ }
+
+.line {
+	height: 500px;
+	width: 1px;
+	background: #c14b30;
+}
+
 #plansform{
 	text-align: center;
 }
 
 .calc {
 	width: 100%;
+	height: 100vh;
 }
 
 .plan {
 	text-align: center;
 	margin-top: 30px;
 	font-size: 1.3em;
+}
+
+@media screen and (max-width: 768px) {
+	.line {
+		display: none;
+	}
 }

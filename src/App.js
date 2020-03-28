@@ -71,7 +71,11 @@ export default function App() {
   }
 
   return (
-    <div className="container d-flex justify-content-center">
+    <div className="container d-flex flex-column">
+      <div className="head">
+        <span>FaleMais</span>
+        <span>Telzir</span>
+      </div>
       <div className="calc row justify-content-around align-items-center">
         
         <div className="form col-md-4">
@@ -106,6 +110,8 @@ export default function App() {
           </form>
         </div>
 
+        <div className="line"></div>
+
         <div className="result col-md-4 d-flex justify-content-center align-items-center flex-column">
           <div className="plan">
             <p>Com FaleMais</p>
@@ -117,7 +123,6 @@ export default function App() {
             <span>${planOff}</span>
           </div>
         </div>
-      
       </div>
     </div>
   )
