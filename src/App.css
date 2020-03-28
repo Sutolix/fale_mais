@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	color: #fff;
+	background: #c23616;
+}
+
+.calc {
+	width: 100%;
+	margin-top: 8em;
+}
+
+.result {
+	padding-left: 10%;
+}
+
+.plan {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 1.3em;
+}
