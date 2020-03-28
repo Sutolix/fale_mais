@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import './App.css';
 
 export default function App() {
+  const [minutes, setMinutes] = useState('');
   const [planOn, setPlanOn] = useState('0');
   const [planOff, setPlanOff] = useState('0');
 
@@ -52,14 +53,17 @@ export default function App() {
 
     const surplus = (data.minutes - data.plan);
     var fmprice = price * 0.1;
+    var validminutes = `${data.minutes}`.length;
 
     console.log(price);
     console.log(surplus);
+    console.log(validminutes);
 
-    if (data.minutes <= 0){
+    if ((data.minutes <= 0) || (validminutes >= 5)){
       alert.error('Por favor, digite um valor válido!');
       setPlanOn('0');
       setPlanOff('0');
+      setMinutes('');
     
     } else if ((surplus < 0) & (data.minutes >= 1)) {
       setPlanOn('0');
@@ -78,7 +82,7 @@ export default function App() {
       </div>
       <div className="calc row justify-content-around align-items-center">
         
-        <div className="form col-md-4">
+        <div className="form col-md-4 order-md-1 order-12">
           <form id="plansform" onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
               <label>Escolha um Plano</label>
@@ -103,16 +107,16 @@ export default function App() {
 
             <div className="form-group">
               <label htmlFor="minutes">Duração da chamada</label>
-              <input className="form-control" ref={register} id="minutes" name="minutes" type="number" min="1" placeholder="min" required />
+              <input className="form-control" ref={register} id="minutes" name="minutes" type="number" min="1" placeholder="min" required value={minutes} onChange={e => setMinutes(e.target.value)}/>
             </div>
 
             <button className="btn btn-success align-self-center" type="submit">Ver por quanto fica</button>
           </form>
         </div>
 
-        <div className="line"></div>
+        <div className="line order-6"></div>
 
-        <div className="result col-md-4 d-flex justify-content-center align-items-center flex-column">
+        <div className="result col-md-4 d-flex align-items-center order-md-12 order-1">
           <div className="plan">
             <p>Com FaleMais</p>
             <span>${planOn}</span>
