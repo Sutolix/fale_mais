@@ -110,6 +110,7 @@ export default function App() {
                 name="minutes"
                 type="number"
                 min="1"
+                max="9999"
                 placeholder="min"
                 required
                 value={minutes}
