@@ -9,34 +9,55 @@ export default function App() {
   const [planOn, setPlanOn] = useState('0');
   const [planOff, setPlanOff] = useState('0');
 
-  const alert = useAlert();
-
   const prices =[
     {
+      title: "011 para 016",
       call:"11-16",
       price:"1.9"
     },
     {
+      title: "011 para 017",
       call:"11-17",
       price:"1.7"
     },
     {
+      title: "011 para 018",
       call:"11-18",
       price:"0.9"
     },
     {
+      title: "016 para 011",
       call:"16-11",
       price:"2.9"
     },
     {
+      title: "017 para 011",
       call:"17-11",
       price:"2.7"
     },
     {
+      title: "018 para 011",
       call:"18-11",
       price:"1.9"
     }
   ]
+
+  const plans = [
+    {
+      title: "FaleMais 30",
+      value: "30"
+    },
+    {
+      title: "FaleMais 60",
+      value: "60"
+    },
+    {
+      title: "FaleMais 120",
+      value: "120"
+    }
+  ]
+
+  const alert = useAlert();
 
   function handleCalc(e){
     e.preventDefault();
@@ -47,7 +68,7 @@ export default function App() {
     let validminutes = `${minutes}`.length;
     let surplus = (minutes - plan);
 
-    if ((minutes <= 0) || (validminutes >= 5)){
+    if ((minutes <= 0) || (validminutes >= 4) || (isNaN(minutes))){
       alert.error('Por favor, digite um valor válido!');
       setPlanOn('0');
       setPlanOff('0');
@@ -59,6 +80,31 @@ export default function App() {
       setPlanOn(parseFloat(surplus * fmprice).toFixed(2));
       setPlanOff(parseFloat(minutes * price).toFixed(2));
     }
+  }
+
+  function validate(e){
+     setMinutes(e.target.value.replace(/\D/g, ''));
+
+    try {
+        if (e.charCode) {
+            var charCode = e.charCode;
+            
+        } else {
+            return true;
+        }
+        if (
+            (charCode > 64 && charCode < 91) || 
+            (charCode > 96 && charCode < 123) ||
+            (charCode > 191 && charCode <= 255) // letras com acentos
+        ){
+            setMinutes('')
+        } else {
+            return true;
+        }
+    } catch (err) {
+        console.log(err.Description);
+    }
+
   }
 
   return (
@@ -79,11 +125,10 @@ export default function App() {
                 name="plan"
                 required
                 value={plan}
-                onChange={e => setPlan(e.target.value)}
-              >
-                <option value="30">FaleMais 30</option>
-                <option value="60">FaleMais 60</option>
-                <option value="120">FaleMais 120</option>
+                onChange={e => setPlan(e.target.value)}>
+                {plans.map(plan => (
+                  <option key={plan.value} value={plan.value}>{plan.title}</option>
+                ))}
               </select>
             </div>
             <div className="form-group">
@@ -93,14 +138,10 @@ export default function App() {
                 name="call"
                 required
                 value={call}
-                onChange={e => setCall(e.target.value)}
-              >
-                <option value="11-16">011 para 016</option>
-                <option value="11-17">011 para 017</option>
-                <option value="11-18">011 para 018</option>
-                <option value="16-11">016 para 011</option>
-                <option value="17-11">017 para 011</option>
-                <option value="18-11">018 para 011</option>
+                onChange={e => setCall(e.target.value)}>
+                  {prices.map(route => (
+                    <option key={route.call} value={route.call}>{route.title}</option>
+                  ))}
               </select>
             </div>
             <div className="form-group">
@@ -108,11 +149,11 @@ export default function App() {
               <input
                 className="form-control"
                 name="minutes"
-                type="number"
-                min="1"
-                max="9999"
+                type="text"
                 placeholder="min"
                 required
+                maxLength="3"
+                onKeyPress={validate}
                 value={minutes}
                 onChange={e => setMinutes(e.target.value)}/>
             </div>

@@ -44,7 +44,15 @@ body {
 .plan {
 	text-align: center;
 	margin-top: 30px;
-	font-size: 1.3em;
+	font-size: 1.7em;
+    padding: 15px;
+    border-radius: 10px;
+    width: 175px;
+    height: 145px;
+}
+
+.plan span {
+	font-size: 1.2em;
 }
 
 .result {
@@ -52,7 +60,21 @@ body {
 	justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+input.invalid:focus {
+  outline-color: darkred;
+}
+
+@media screen and (max-width: 400px) {
+	.plan {
+		width: 145px;
+		height: 120px;
+		font-size: 1.2em;
+		border: 1px solid;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
 	.line {
 		display: none;
 	}
@@ -68,5 +90,13 @@ body {
 	.result {
 		flex-direction: row;
 		justify-content: space-around;
+	}
+
+	.plan{
+		border: 1px solid;
+	}
+
+	.plan span {
+		font-size: 1.5em;
 	}
 }
