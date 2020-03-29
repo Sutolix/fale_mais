@@ -83,28 +83,7 @@ export default function App() {
   }
 
   function validate(e){
-     setMinutes(e.target.value.replace(/\D/g, ''));
-
-    try {
-        if (e.charCode) {
-            var charCode = e.charCode;
-            
-        } else {
-            return true;
-        }
-        if (
-            (charCode > 64 && charCode < 91) || 
-            (charCode > 96 && charCode < 123) ||
-            (charCode > 191 && charCode <= 255) // letras com acentos
-        ){
-            setMinutes('')
-        } else {
-            return true;
-        }
-    } catch (err) {
-        console.log(err.Description);
-    }
-
+    setMinutes(e.target.value.replace(/\D/g, ''));
   }
 
   return (
