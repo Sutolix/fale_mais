@@ -35,10 +35,6 @@ export default function App() {
     }
   }
 
-  function validate(e){
-    setMinutes(e.target.value.replace(/\D/g, ''));
-  }
-
   return (
     <div className="container d-flex flex-column">
 
@@ -85,9 +81,8 @@ export default function App() {
                 placeholder="min"
                 required
                 maxLength="3"
-                onKeyPress={validate}
                 value={minutes}
-                onChange={e => setMinutes(e.target.value)}/>
+                onChange={e => setMinutes(e.target.value.replace(/\D/g, ''))}/>
             </div>
             <button className="btn btn-success align-self-center" type="submit">Ver por quanto fica</button>
           </form>
