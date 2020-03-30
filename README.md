@@ -45,14 +45,14 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 
 <div id='responsiveness' />
 
-### Responsiveness
+## Responsiveness
 
 ##### Compatible with mobile devices and desktops
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/56132780/77971252-9825ec00-72c4-11ea-9ab9-b03676e84f57.gif)
 
 <div id='invalid' />
 
-### Handling invalid entries
+## Handling invalid entries
 
 ##### Just numbers in the minutes field.
 
