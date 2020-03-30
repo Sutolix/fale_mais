@@ -28,6 +28,11 @@ This project aims to create a functional and practical web application meeting t
 
 <div id='rules' />
 
+## Install
+
+## Working
+![Hnet-image](https://user-images.githubusercontent.com/56132780/77972582-3a939e80-72c8-11ea-96ac-6e90f67dd173.gif)
+
 ## Business rules:
 
 Here we have the normal rates according to your origin and destination ddds.
