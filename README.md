@@ -54,15 +54,15 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 
 ## Handling invalid entries
 
-##### Just numbers in the minutes field.
+#### Just numbers in the minutes field.
 
 ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/56132780/77921861-acdb9300-7276-11ea-8bd7-ce7d16492c12.gif)
 
-### Alerts personalizados
+#### Alerts personalizados
 
-##### If the user circumvents the required input
+###### If the user circumvents the required input
 ![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/56132780/77921872-afd68380-7276-11ea-8b9a-7f7ab8f751bb.gif)
-##### If the user submits 0
+###### If the user submits 0
 ![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/56132780/77921893-b36a0a80-7276-11ea-86f4-ae85a518b396.gif)
 
 
