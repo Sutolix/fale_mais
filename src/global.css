@@ -22,9 +22,19 @@ body {
 	margin-bottom: 5px;
 	font-size: 2em;
 	font-family: 'Pacifico', cursive;
+	cursor: pointer;
+}
+
+.container .head span:hover {
+	filter: brightness(0.8);
 }
  .container .head span:last-child{
  	font-size: 0.8em;
+ }
+
+ .container .head span a{
+ 	text-decoration: none;
+ 	color: #fff;
  }
 
 .line {
@@ -51,8 +61,26 @@ body {
     height: 145px;
 }
 
+.plan p {
+	cursor: default;
+}
+
 .plan span {
 	font-size: 1.2em;
+}
+
+.plan:hover{
+	background: #018E42;
+	    box-shadow:
+        1px 1px #3C1518,
+        2px 2px #3C1518,
+        3px 3px #3C1518;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+.plan:last-child:hover{
+	background: #69140E;
 }
 
 .result {

@@ -39,7 +39,7 @@ export default function App() {
     <div className="container d-flex flex-column">
 
       <div className="head">
-        <span>FaleMais</span>
+        <span><a href="/">FaleMais</a></span>
         <span>Telzir</span>
       </div>
 
