@@ -45,7 +45,7 @@ This command will download the node modules files needed for operation. After th
 
 > ``npm start``
 
-This will open a local server and your browser will open with the application. That's all, it's already working!
+**** This will open a local server and your browser will open with the application. That's all, it's already working!
 
 <div id='operation' />
 
