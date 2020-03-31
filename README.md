@@ -96,9 +96,3 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 
 ###### If the user submits 0
 ![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/56132780/77921893-b36a0a80-7276-11ea-86f4-ae85a518b396.gif)
-
-
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/56132780/77921856-ac42fc80-7276-11ea-86ba-5a39d0242f48.gif)
-![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/56132780/77921862-ae0cc000-7276-11ea-8d4f-2b0a13f4cf60.gif)
-
-![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/56132780/77921893-b36a0a80-7276-11ea-86f4-ae85a518b396.gif)
