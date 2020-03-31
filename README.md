@@ -31,7 +31,7 @@ This project aims to create a functional and practical web application meeting t
 <div id='installing' />
 
 ## Install
-*******
+
 ##### Requirements:
 
 - [NodeJs](https://nodejs.org/en)
