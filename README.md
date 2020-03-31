@@ -9,7 +9,6 @@
 
 ## Project developed during the Vizir selection process
 
-*******
  ***Summary*** 
  1. [Goal](#goal)
  2. [Technologies used](#technologies)
