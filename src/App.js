@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { useAlert } from 'react-alert';
-import './global.css';
 import {prices, plans} from './services/tarifs.js';
+import LottieAnimation from './components/LottieAnimation';
+import './global.css';
 
 export default function App() {
   const [plan, setPlan] = useState('30');
@@ -21,6 +22,7 @@ export default function App() {
     let validminutes = `${minutes}`.length;
     let surplus = (minutes - plan);
 
+
     if ((minutes <= 0) || (validminutes >= 4) || (isNaN(minutes))){
       alert.error('Por favor, digite um valor válido!');
       setPlanOn('0');
@@ -34,6 +36,7 @@ export default function App() {
       setPlanOff(parseFloat(minutes * price).toFixed(2));
     }
   }
+
 
   return (
     <div className="container d-flex flex-column">
@@ -90,15 +93,20 @@ export default function App() {
 
         <div className="line order-6"></div>
 
-        <div className="result col-md-4 d-flex align-items-center order-md-12 order-1">
+        <div className="result col-md-4 d-flex align-items-center flex-row order-md-12 order-1">
+          
+          <div className="tarifs d-flex">
           <div className="plan">
             <p>Com FaleMais</p>
             <span>${planOn}</span>
           </div>
-
           <div className="plan">
             <p>Sem FaleMais</p>
             <span>${planOff}</span>
+          </div>
+          </div>
+          <div className="lottie">
+            <LottieAnimation />
           </div>
         </div>
       </section>

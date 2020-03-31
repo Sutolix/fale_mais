@@ -28,7 +28,7 @@ body {
 .container .head span:hover {
 	filter: brightness(0.8);
 }
- .container .head span:last-child{
+ .container .head span:nth-child(2){
  	font-size: 0.8em;
  }
 
@@ -49,6 +49,10 @@ body {
 
 .calc {
 	height: 100vh;
+}
+
+.tarifs {
+	flex-direction: column;
 }
 
 .plan {
@@ -92,6 +96,10 @@ input.invalid:focus {
   outline-color: darkred;
 }
 
+.result .lottie div{
+	margin: 0!important;
+}
+
 @media screen and (max-width: 400px) {
 	.plan {
 		width: 145px;
@@ -120,11 +128,21 @@ input.invalid:focus {
 		justify-content: space-around;
 	}
 
+	.tarifs {
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-around;
+	}
+
 	.plan{
 		border: 1px solid;
 	}
 
 	.plan span {
 		font-size: 1.5em;
+	}
+
+	.result .lottie div {
+		display: none;
 	}
 }
