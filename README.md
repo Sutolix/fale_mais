@@ -6,6 +6,8 @@
  ***Summary*** 
  1. [Goal](#goal)
  2. [Technologies used](#technologies)
+ 2. [Installing in a local environment](#installing)
+ 3. [In operation](#operation)
  3. [Business rules](#rules)
  4. [Responsiveness](#responsiveness)
  5. [Handling invalid entries](#invalid)
@@ -26,12 +28,32 @@ This project aims to create a functional and practical web application meeting t
 - React Alert
 - Git
 
-<div id='rules' />
+<div id='installing' />
 
 ## Install
 
-## Working
+##### Requirements:
+
+- [NodeJs](https://nodejs.org/en)
+
+First download or clone the files from the repository on the machine you want to run on. Inside the main directory of the repository you downloaded, run the following command:
+###### Attention: please make sure you have installed NodeJs on your machine and that it is working.
+
+``npm init``
+
+This command will download the node modules files needed for operation. After that, run the command:
+
+``npm start``
+
+This will open a local server and your browser will open with the application. That's all, it's already working!
+
+<div id='operation' />
+
+## In operation
+
 ![Hnet-image](https://user-images.githubusercontent.com/56132780/77972582-3a939e80-72c8-11ea-96ac-6e90f67dd173.gif)
+
+<div id='rules' />
 
 ## Business rules:
 
@@ -67,6 +89,10 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 
 ###### If the user circumvents the required input
 ![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/56132780/77921872-afd68380-7276-11ea-8b9a-7f7ab8f751bb.gif)
+
+###### If the user circumvents the maxlength 
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/56132780/77973186-e5588c80-72c9-11ea-9700-28d57858a375.gif)
+
 ###### If the user submits 0
 ![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/56132780/77921893-b36a0a80-7276-11ea-86f4-ae85a518b396.gif)
 
