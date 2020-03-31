@@ -86,7 +86,7 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 
 ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/56132780/77921861-acdb9300-7276-11ea-8bd7-ce7d16492c12.gif)
 
-#### Alerts personalizados
+#### Custom alerts
 
 ###### If the user circumvents the required input
 ![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/56132780/77921872-afd68380-7276-11ea-8b9a-7f7ab8f751bb.gif)
