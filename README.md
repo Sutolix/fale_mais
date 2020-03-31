@@ -39,11 +39,11 @@ This project aims to create a functional and practical web application meeting t
 First download or clone the files from the repository on the machine you want to run on. Inside the main directory of the repository you downloaded, run the following command:
 ###### Attention: please make sure you have installed NodeJs on your machine and that it is working.
 
-``npm init``
+> ``npm init``
 
 This command will download the node modules files needed for operation. After that, run the command:
 
-``npm start``
+> ``npm start``
 
 This will open a local server and your browser will open with the application. That's all, it's already working!
 
