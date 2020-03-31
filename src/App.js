@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useAlert } from 'react-alert';
 import {prices, plans} from './services/tarifs.js';
-import LottieAnimation from './components/LottieAnimation';
+import { LottieAnimation } from './components/LottieAnimation';
 import './global.css';
 
 export default function App() {
@@ -105,7 +105,7 @@ export default function App() {
             <span>${planOff}</span>
           </div>
           </div>
-          <div className="lottie">
+          <div className="lottie" title="Canela, o nosso mascote robô ^^">
             <LottieAnimation />
           </div>
         </div>

@@ -1,25 +1,13 @@
-// UncontrolledLottie.jsx
 import React from 'react';
-import Lottie from 'react-lottie';
-import animationData from '../lotties/10178-c-bot.json';
+import { Lottie } from '@crello/react-lottie';
+import animationData from '../lotties/10178-c-bot.json'
 
-export default function LottieAnimation(){
-
-    const defaultOptions = {
-      loop: true,
-      autoplay: true,
-      animationData: animationData,
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice'
-      }
-    };
-
-    return(
-      <div>
-        <Lottie options={defaultOptions}
-              height={80}
-              width={80}
+export const LottieAnimation = () => (
+        <Lottie
+            width="150px"
+            height="150px"
+            speed="1.2"
+            className="lottie-container basic"
+            config={{ animationData: animationData, loop: true, autoplay: true }}
         />
-      </div>
-    )
-  }
+)

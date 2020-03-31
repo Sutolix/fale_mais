@@ -98,6 +98,7 @@ input.invalid:focus {
 
 .result .lottie div{
 	margin: 0!important;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 400px) {
