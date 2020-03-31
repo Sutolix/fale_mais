@@ -1,4 +1,11 @@
-# Show me The Code - FaleMais
+<h1 align="center">
+  Show me The Code - FaleMais
+</h1>
+
+<p align="center">
+  <img width="172" height="186" src="https://user-images.githubusercontent.com/56132780/77975092-7120e780-72cf-11ea-98dc-96020cdc61a2.png">
+</p>
+
 
 ## Project developed during the Vizir selection process
 
