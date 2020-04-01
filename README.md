@@ -109,3 +109,6 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 <p align="center">
    <img width="320" height="320" src="https://user-images.githubusercontent.com/56132780/78135841-eb00c000-73f8-11ea-913a-23a63ca27e6c.gif">
 </p>
+<p align="center">
+  <b>That's all, thanks.</b>
+</p>
