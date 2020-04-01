@@ -1,6 +1,6 @@
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
-import animationData from '../lotties/10178-c-bot.json'
+import animationData from '../lotties/10178-c-bot.json';
 
 export const LottieAnimation = () => (
         <Lottie
