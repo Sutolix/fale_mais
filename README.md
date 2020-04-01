@@ -54,6 +54,8 @@ This command will download the node modules files needed for operation. After th
 
 **This will open a local server and your browser will open with the application. That's all, it's already working!**
 
+###### To add new ddds and rates, simply access the services folder within src. The arrays with the data are inside the tarifs.js file.
+
 <div id='operation' />
 
 ## In operation
