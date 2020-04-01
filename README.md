@@ -64,7 +64,7 @@ This command will download the node modules files needed for operation. After th
 
 <div id='rules' />
 
-## Business rules:
+## Business rules
 
 Here we have the normal rates according to your origin and destination ddds.
 
