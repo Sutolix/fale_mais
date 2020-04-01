@@ -62,6 +62,8 @@ This command will download the node modules files needed for operation. After th
 
 ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/56132780/78131172-ff40bf00-73f0-11ea-92ef-c0e071951622.gif)
 
+You can see the application online [here](https://planosfalemais.netlify.com/) or at the top of the repository near the description.
+
 <div id='rules' />
 
 ## Business rules
