@@ -43,7 +43,7 @@ This project aims to create a functional and practical web application meeting t
 - [NodeJs](https://nodejs.org/en)
 *******
 
-First download or clone the files from the repository on the machine you want to run on. Inside the main directory of the repository you downloaded, run the following command:
+First download or clone the files from the repository on the machine you want to run on. Inside the main directory of the repository you downloaded, run the following command in the terminal (or in PowerShell if you are on Windows and so prefer):
 > ###### Attention: please make sure you have installed NodeJs on your machine and that it is working.
 
 ``npm install``
@@ -54,7 +54,7 @@ This command will download the node modules files needed for operation. After th
 
 **This will open a local server and your browser will open with the application. That's all, it's already working!**
 
-> ###### To add new ddds and rates, simply access the services folder within src. The arrays with the data are inside the tarifs.js file.
+> ###### To add new ddds and rates, simply access the services folder within src. The arrays with the data are inside the tarifs.js file. Just add the new data to the array that will already be functional.
 
 <div id='operation' />
 
