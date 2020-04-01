@@ -32,6 +32,7 @@ This project aims to create a functional and practical web application meeting t
 - NodeJs
 - ReactJs
 - React Alert
+- Bootstrap v4.4
 - Git
 
 <div id='installing' />
