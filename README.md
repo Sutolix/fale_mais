@@ -58,7 +58,7 @@ This command will download the node modules files needed for operation. After th
 
 ## In operation
 
-![Hnet-image](https://user-images.githubusercontent.com/56132780/77972582-3a939e80-72c8-11ea-96ac-6e90f67dd173.gif)
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/56132780/78131172-ff40bf00-73f0-11ea-92ef-c0e071951622.gif)
 
 <div id='rules' />
 
@@ -82,7 +82,7 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 ## Responsiveness
 
 ##### Compatible with mobile devices and desktops
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/56132780/77971252-9825ec00-72c4-11ea-9ab9-b03676e84f57.gif)
+![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/56132780/78131261-28614f80-73f1-11ea-85df-41b6456cbf4a.gif)
 
 <div id='invalid' />
 
@@ -90,15 +90,15 @@ With the inclusion of the new plans (FaleMais 30, FaleMais 60 and FaleMais 120) 
 
 #### Just numbers in the minutes field.
 
-![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/56132780/77921861-acdb9300-7276-11ea-8bd7-ce7d16492c12.gif)
+![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/56132780/78131312-42029700-73f1-11ea-8606-8ba91105b2a3.gif)
 
 #### Custom alerts
 
 ###### If the user circumvents the required input
-![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/56132780/77921872-afd68380-7276-11ea-8b9a-7f7ab8f751bb.gif)
+![ezgif com-video-to-gif (5)](https://user-images.githubusercontent.com/56132780/78131365-5777c100-73f1-11ea-96c7-3238d806e60c.gif)
 
 ###### If the user circumvents the maxlength 
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/56132780/77973186-e5588c80-72c9-11ea-9700-28d57858a375.gif)
+![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/56132780/78131408-678fa080-73f1-11ea-9096-984b7c8d5eb9.gif)
 
 ###### If the user submits 0
-![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/56132780/77921893-b36a0a80-7276-11ea-86f4-ae85a518b396.gif)
+![ezgif com-video-to-gif (7)](https://user-images.githubusercontent.com/56132780/78131441-75ddbc80-73f1-11ea-9a55-1190689d1c70.gif)
