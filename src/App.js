@@ -17,7 +17,7 @@ export default function App() {
   //Alert
   const alert = useAlert();
   
-  //Receive and process the data
+  //Process and send the data
   function handleCalc(e) {
     e.preventDefault();
     let result = Calculator({call, minutes, plan});
