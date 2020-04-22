@@ -1,43 +1,37 @@
 import React, { useState } from 'react';
 import { useAlert } from 'react-alert';
 import { prices, plans } from './services/tarifs.js';
+import Calculator from './services/rules.js';
 import { LottieAnimation } from './components/LottieAnimation';
 import './global.css';
 
 export default function App() {
+
   //States
   const [plan, setPlan] = useState('30');
   const [call, setCall] = useState('11-16');
   const [minutes, setMinutes] = useState('');
   const [planOn, setPlanOn] = useState('0');
   const [planOff, setPlanOff] = useState('0');
-  
-  //Custom Alert
-  const alert = useAlert();
 
-  //Calculates the result
+  //Alert
+  const alert = useAlert();
+  
+  //Receive and process the data
   function handleCalc(e) {
     e.preventDefault();
+    let result = Calculator({call, minutes, plan});
+    updateData(result);
+  }
 
-    let find = (prices.filter(item => item.call === call))[0];
-    let price = find.price;
-    let fmprice = ((parseFloat(price) * 0.1) + parseFloat(price));
-    let validminutes = `${minutes}`.length;
-    let surplus = (minutes - plan);
-
-    //Calculation logic
-    if ((minutes <= 0) || (validminutes >= 4) || (isNaN(minutes))) {
-      alert.error('Por favor, digite um valor válido!');
-      setPlanOn('0');
-      setPlanOff('0');
+  //Show update
+  function updateData(result){
+    if (result.alert){
       setMinutes('');
-    } else if ((surplus < 0) & (minutes >= 1)) {
-      setPlanOn('0');
-      setPlanOff(parseFloat(((minutes) * price).toFixed(2)));
-    } else {
-      setPlanOn(parseFloat(surplus * fmprice).toFixed(2));
-      setPlanOff(parseFloat(minutes * price).toFixed(2));
+      alert.error("Por favor, digite um valor válido!")
     }
+    setPlanOn(result.on);
+    setPlanOff(result.off);
   }
 
   return (
