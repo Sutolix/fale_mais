@@ -1,14 +1,14 @@
 import { prices } from './tarifs.js'
 
 export default function Calculator ({ call, minutes, plan }) {
-   	const find = (prices.filter(item => item.call === call))[0]
-  const price = find.price
-  const fmprice = ((parseFloat(price) * 0.1) + parseFloat(price))
-  const validminutes = `${minutes}`.length
-  const surplus = (minutes - plan)
+  let find = (prices.filter(item => item.call === call))[0]
+  let price = find.price
+  let fmprice = ((parseFloat(price) * 0.1) + parseFloat(price))
+  let validminutes = `${minutes}`.length
+  let surplus = (minutes - plan)
 
-  const on = (surplus * fmprice).toFixed(2)
-  const off = (minutes * price).toFixed(2)
+  let on = (surplus * fmprice).toFixed(2)
+  let off = (minutes * price).toFixed(2)
 
   if ((minutes <= 0) || (validminutes >= 4) || (isNaN(minutes))) {
     const result = {
